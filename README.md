@@ -7,6 +7,7 @@ I have used this api to fetch data and display it in the application.
 To extract the project following commands needs to be run
 
 - git clone https://github.com/surbhirajpal/FTL-Assignment.git
+- cd FTL-Assignment
 - cd my-app
 - npm i
 - npm start
