@@ -1,0 +1,22 @@
+.cards{
+    .button{
+        text-align: right;
+        padding:10px;
+        margin-bottom: 10px;
+    }
+
+    .flex{
+    
+        border: 1px solid #e8e8e8;
+        margin-bottom: 20px;
+        padding: 10px;
+    
+        .calender{
+            .ant-picker-calendar{
+                width: 300px;
+                border: 1px solid #e8e8e8;
+                border-radius: 4px;
+            }
+        }
+    }
+}
