@@ -5,36 +5,96 @@
         margin: auto;
 
         .ant-row{
+            justify-content: center;
             .ant-col{
-                .card{
-
-                    &:hover{
-                        border: 1px solid #40a9ff;
-                        color:#40a9ff
-                    }
-
-                    border: 1px solid #e8e8e8;
-                    padding: 20px;
-                    text-align: center;
-                    position: relative;
-                    margin: 30px;
-                    .image{
-                        margin: auto;
-                        width: 100px;
-                        height: 100px;
-                        border-radius: 50%;
-                        overflow: hidden;
-                        img{
-                            width: 100%;
+                cursor: pointer;
+                &:nth-of-type(2){
+                    .border{
+                        .detail{
+                            .image{
+                                background-image: url("https://cdn.pixabay.com/photo/2015/01/27/09/58/human-613601_1280.jpg");
+                            }
                         }
                     }
+                }
+                .border{
+                    padding: 10px;
+                    margin: 10px;
+                    border: 5px solid transparent;
 
-                    .details{
-                        margin-top: 20px;
-                        font-weight: bold;
-                        font-size: 16px;
+                    &:hover{
+                        border: 5px solid #3d3d3d;
+                        .detail{
+                            .overlay{
+                                display: block;
+                            }
+                            .content{
+                                display: flex;
+                                flex-flow: column;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                            }
+                        }
                     }
+                    .detail{
+                        position: relative;
+                        height: 300px;
+                        overflow: hidden;
+                        .image{
+                            width: 100%;
+                            height: 100%;
+                            background-color: #fafafa;
+                            overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            background-position: center;
+                            background-size: cover;
+                            background-image: url("https://cdn.pixabay.com/photo/2020/04/24/00/38/face-5084530_1280.jpg");
+                            
+                        }
+                        .overlay{
+                            text-align:center;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background:#614247;
+                            opacity: 0.8;
+                            display: none;
+                        }
+                        .content{
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
+                            color: #fff;
+                            display: none;
+                            padding: 10px;
+                            .name{
+                                text-transform: uppercase;
+                                font-size: 16px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }            
+        }
+    }
+}
 
+@media (max-width: 762px) {
+    .main{
+        .container{
+            .ant-row{
+                .ant-col{
+                    .border{
+                        .detail{
+                            height: 200px;;
+                        }
+                    }
                 }
             }
         }

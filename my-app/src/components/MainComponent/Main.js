@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Modal, DatePicker, Button } from 'antd';
+import { Row, Col, Modal} from 'antd';
 import DisplayTime from '../MemberDetails/MemberDetails';
 import './Main.scss'
 
@@ -69,20 +69,18 @@ class Main extends React.Component {
                     <div className="container">
                         <Row>
                             {items.map(item => (
-                                <Col xs={24} sm={24} md={12} lg={12} xl={12} key={item.id} onClick={() => this.showModal(item.activity_periods)}>
+                                <Col xs={24} sm={24} md={12} lg={8} xl={8} key={item.id} onClick={() => this.showModal(item.activity_periods)}>
                                     <div className="border">
-                                        <div className="card">
-                                            <div className="overlay" />
+                                        <div className="detail">
                                             <div className="image">
-                                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" />
                                             </div>
-                                            <div className="details">
-                                                <p>USER ID - {item.id}</p>
-                                                <p>NAME - {item.real_name}</p>
-                                                <p>LOCATION - {item.tz}</p>
+                                            <div className="overlay" />
+                                            <div className="content">
+                                                <p className="name">USER ID - {item.id}</p>
+                                                <p className="name">NAME - {item.real_name}</p>
+                                                <p className="name">LOCATION - {item.tz}</p>
                                             </div>
                                         </div>
-
                                     </div>
                                 </Col>
                             ))}

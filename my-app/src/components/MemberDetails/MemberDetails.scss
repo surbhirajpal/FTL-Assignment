@@ -1,21 +1,105 @@
-.cards{
+.ant-modal{
+    .ant-modal-close-x{
+        color: #fff;
+    }
+    .ant-modal-header{
+        background-color: #614247;
+        border-bottom:1px solid #614247;
+        text-transform: uppercase;
+        .ant-modal-title{
+            color: #fff;
+
+        }
+    }
+
+    .ant-btn{
+        &:hover{
+            border-color: #614247;
+            color: #614247;
+        }
+        &:focus{
+            border-color: #614247;
+            color: #614247;
+        }
+    }
+    .ant-btn-primary{
+        background-color: #614247;
+        border-color: #614247;
+        &:hover{
+            background-color: #fff;
+            color: #614247;
+        }
+    }
+}
+
+
+.member-details{
     .button{
         text-align: right;
         padding:10px;
         margin-bottom: 10px;
     }
 
-    .flex{
-    
-        border: 1px solid #e8e8e8;
-        margin-bottom: 20px;
-        padding: 10px;
-    
-        .calender{
-            .ant-picker-calendar{
-                width: 300px;
-                border: 1px solid #e8e8e8;
-                border-radius: 4px;
+    .cards{
+        margin-top: 30px;
+        color: #3d3d3d;
+        .flex{    
+            border: 1px solid #614247;
+            margin-bottom: 20px;
+            padding: 10px;
+
+            .details{
+                p{
+                    margin-bottom: 5px;
+                }
+            }
+        
+            .calender{
+                .ant-picker-calendar{
+                    width: 300px;
+                    border: 1px solid #e8e8e8;
+                    border-radius: 4px;
+
+                    .ant-select-selector{
+                        border-color: #d9d9d9;
+                        color: #d9d9d9;
+                        &:hover{
+                            border: 1px solid #614247;
+                            color: #614247;
+                        }
+                    }
+
+                    .ant-radio-button-wrapper-checked{
+                        border: 1px solid #614247;
+                        color: #614247;
+                        box-shadow: #614247;
+                    }
+                    .ant-picker-cell-in-view{
+                        &.ant-picker-cell-selected{
+                            .ant-picker-cell-inner{
+                                background: #614247;
+                            }
+                        }
+                        
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .member-details{
+        .cards{
+            .flex{
+                .calender{
+                    .ant-picker-calendar{
+                        width: 100%;
+                        .ant-picker-pannel{
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
